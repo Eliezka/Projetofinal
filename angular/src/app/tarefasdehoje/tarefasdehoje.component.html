@@ -1,0 +1,14 @@
+<h1>Tarefas de hoje</h1>
+<p> Tarefas para serem feitas hoje </p>
+
+<li *ngFor="let tarefa of tarefas">
+    <b>{{ tarefa.name }}</b>
+    <ul>
+        <li> Descrição: {{ tarefa.descricao }}</li>
+        <li> Prazo: {{ tarefa.prazo }}</li>
+    </ul>
+</li>
+          
+
+        
+
