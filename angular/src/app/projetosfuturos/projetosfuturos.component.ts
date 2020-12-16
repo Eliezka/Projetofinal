@@ -13,8 +13,4 @@ export class ProjetosfuturosComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
-    
-  }
-
 }

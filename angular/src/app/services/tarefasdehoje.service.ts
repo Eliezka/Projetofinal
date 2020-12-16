@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TarefasdehojeService {
 
-  task: any = [];
+  task: any;
 
   constructor(private http: HttpClient) { }
   

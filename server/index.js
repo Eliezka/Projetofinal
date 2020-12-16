@@ -1,6 +1,6 @@
 const express = require('express')
 const { Sequelize, DataTypes } = require('sequelize');
-const task = require('./models/task')
+const Task = require('./models/task')
 
 const cors = require('cors');
 const app = express()
@@ -10,7 +10,9 @@ app.use(cors());
 const sequelize = new Sequelize({ dialect: 'sqlite', storage: './task-list.db' });
 const tasks = Task(sequelize, DataTypes)
 
-app.use(express.json())
+app.set('view engine', 'ejs')
+
+//app.use(express.json())
 
 app.get('/tarefasdehoje', async (req, res) => {
    const resultados = await tasks.findAll()
@@ -22,12 +24,12 @@ app.listen(3000, () => {
     console.log('Iniciando o ExpressJS na porta 3000')
   })
 
-  // Create task
-//app.post('/tarefasdehoje', (req, res) => {
+  //Create task
+//app.post('/projetosfuturos', (req, res) => {
  //const body = req.body
   
- // res.json(body)
- //})
+ //res.json(body)
+// })
   
   // Show task
   //app.get('/tarefasdehoje/:id', (req, res) => {

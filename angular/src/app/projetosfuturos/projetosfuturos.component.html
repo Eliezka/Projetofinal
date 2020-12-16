@@ -8,19 +8,27 @@
   <body>
     <h1>Projetos futuros</h1>
 <div>
-    <form id="form-add-task">
+  <div> 
+  <form >
       <label>
         Projetos futuros:
-        <input type="text" name="task" />
+        <input id="profut" type="text" name="task" />
       </label>
 
-      <button type="submit">Adicionar</button>
+      <button id="btnAddTask" type="button" onclick="addNewTask()">Adicionar</button>
     </form>
+  </div> 
 
-    <ul id="todos"></ul>
+  <div>
+    <ul id="projetosfuturos">
+
+    </ul>
+  </div>
 
 	<script src="./scripts.js"></script>
 </div>
+
+
 <div>
 	<ul>
 		<li>Revalidação do diploma da faculdade <input type="checkbox" ></li>
@@ -32,3 +40,4 @@
 </div>
   </body>
 </html>
+
