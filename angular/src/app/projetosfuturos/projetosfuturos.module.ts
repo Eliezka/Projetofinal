@@ -6,7 +6,9 @@ import { ProjetosfuturosComponent } from './projetosfuturos.component';
 @NgModule({
   declarations: [ProjetosfuturosComponent],
   imports: [
+    
     CommonModule,
+    
   ],
   exports: [
     ProjetosfuturosComponent,

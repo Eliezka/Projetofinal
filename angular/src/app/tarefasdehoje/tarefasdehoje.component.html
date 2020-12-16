@@ -1,13 +1,45 @@
-<h1>Tarefas de hoje</h1>
+<!--<h1>Tarefas de hoje</h1>
 <p> Tarefas para serem feitas hoje </p>
 
-<li *ngFor="let tarefa of tarefas">
-    <b>{{ tarefa.name }}</b>
+<li *ngFor="let task of tasks">
+    <b>{{ task.name }}</b>
     <ul>
-        <li> Descrição: {{ tarefa.descricao }}</li>
-        <li> Prazo: {{ tarefa.prazo }}</li>
+        <li> Descrição: {{ task.descricao }}</li>
+        <li> Prazo: {{ task.prazo }}</li>
     </ul>
 </li>
+-->
+
+
+<h2>Tarefas de hoje</h2>
+<div>
+  <div>
+    <p>A seguir, as tarefas para fazer hoje: {{ data }}</p>
+    <ul>
+
+      <li *ngFor="let task of tasks">
+        <b>{{ task.name }}</b>
+
+        <ul>
+          <li>Descrição: {{ task.descricao }} </li>
+          <li>Prazo: {{ task.prazo}}</li>
+        </ul>  
+      </li>            
+    </ul>
+  </div>
+
+  <div>
+    <ul>
+      <li>Fazer as comidas do dia <input type="checkbox" ></li>
+      <li>Trabalhar <input type="checkbox" ></li>
+      <li>Receber, dar banho e comida nos filhos <input type="checkbox" ></li>
+      <li>Presentar o projeto final de TOTI <input type="checkbox" ></li>
+      <li>Confraternização do amigo secreto do tralalho <input type="checkbox" ></li>
+    </ul>
+  </div>
+
+  
+</div>
           
 
         

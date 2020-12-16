@@ -9,16 +9,19 @@ import { TarefasdehojeService } from '../services/tarefasdehoje.service';
 })
 export class TarefasdehojeComponent implements OnInit {
 
-  tarefas: any = [];
+  data = '18 de dezembro de 2020';
+
+  tasks: any;
 
   constructor(tarefasdehojeServ: TarefasdehojeService) { 
+    tarefasdehojeServ.getTodos().subscribe(tasks => { this.tasks = tasks;
+    console.log(tasks);
+  });
 
-    tarefasdehojeServ.getTodos()
-    .subscribe(tarefas => this.tarefas = this.tarefas['resultados']);
-    
-  }
-
+    }
+  
   ngOnInit(): void {
+   
   }
 
 }

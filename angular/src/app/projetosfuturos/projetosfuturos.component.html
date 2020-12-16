@@ -1,25 +1,34 @@
+
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">  
-</head>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
 
+  <body>
+    <h1>Projetos futuros</h1>
+<div>
+    <form id="form-add-task">
+      <label>
+        Projetos futuros:
+        <input type="text" name="task" />
+      </label>
 
-<h1>Projetos futuros</h1>
+      <button type="submit">Adicionar</button>
+    </form>
 
+    <ul id="todos"></ul>
 
-<form>
-    <label>
-        Projetos futuros
-	<input type="text" id="newTask" value="" placeholder="Escreva aqui">
-    </label>
-    
-    <button type="button" id="btnAddTask"> Adicionar</button>
-</form>
-
-<ul id="taskList">
-</ul>
-
-<script src="angular\src\app\projetosfuturos\scripts.js"></script>
-
-	
+	<script src="./scripts.js"></script>
+</div>
+<div>
+	<ul>
+		<li>Revalidação do diploma da faculdade <input type="checkbox" ></li>
+		<li>Trabalhar na área de formação <input type="checkbox" ></li>
+		<li>Ter um negocio proprio que gere renda extra <input type="checkbox" ></li>
+		<li>Comprar um lote para construir minha casa <input type="checkbox" ></li>
+		<li>Comprar um carro <input type="checkbox" ></li>
+	</ul>
+</div>
+  </body>
+</html>

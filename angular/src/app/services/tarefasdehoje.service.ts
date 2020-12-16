@@ -7,13 +7,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TarefasdehojeService {
 
-  tarefasdehoje: any = [];
+  task: any = [];
 
   constructor(private http: HttpClient) { }
+  
 
   getTodos() {
-    return this.http.get('http://localhost:3000/tarefasdehoje')
-
+    return this.http.get('http://localhost:3000/tarefasdehoje');
+    
   }
 
 }

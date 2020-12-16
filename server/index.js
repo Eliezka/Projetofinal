@@ -1,10 +1,14 @@
 const express = require('express')
-const app = express()
 const { Sequelize, DataTypes } = require('sequelize');
 const task = require('./models/task')
 
+const cors = require('cors');
+const app = express()
+
+app.use(cors());
+
 const sequelize = new Sequelize({ dialect: 'sqlite', storage: './task-list.db' });
-const tasks = task(sequelize, DataTypes)
+const tasks = Task(sequelize, DataTypes)
 
 app.use(express.json())
 
@@ -14,12 +18,16 @@ app.get('/tarefasdehoje', async (req, res) => {
     res.json({ resultados: resultados})
 })
 
-// Create task
+app.listen(3000, () => {
+    console.log('Iniciando o ExpressJS na porta 3000')
+  })
+
+  // Create task
 //app.post('/tarefasdehoje', (req, res) => {
-//    const body = req.body
+ //const body = req.body
   
- //   res.json(body)
- // })
+ // res.json(body)
+ //})
   
   // Show task
   //app.get('/tarefasdehoje/:id', (req, res) => {
@@ -41,7 +49,3 @@ app.get('/tarefasdehoje', async (req, res) => {
   
    // res.send({ action: 'Deleting task', taskId: taskId })
  // })
-  
-  app.listen(3000, () => {
-    console.log('Iniciando o ExpressJS na porta 3000')
-  })
