@@ -16,8 +16,11 @@ export class TarefasdehojeComponent implements OnInit {
   constructor(tarefasdehojeServ: TarefasdehojeService) { 
     tarefasdehojeServ.getTodos().subscribe(tasks => { this.tasks = tasks;
     console.log(tasks);
+    
   });
 
+
+  
     }
   
   ngOnInit(): void {

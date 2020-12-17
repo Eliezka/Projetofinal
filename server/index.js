@@ -20,16 +20,18 @@ app.get('/tarefasdehoje', async (req, res) => {
     res.json({ resultados: resultados})
 })
 
+  //Create task
+//app.post('/tarefasdehoje', (req, res) => {
+ //const body = req.body
+  
+// res.json(body)
+// })
+
 app.listen(3000, () => {
     console.log('Iniciando o ExpressJS na porta 3000')
   })
 
-  //Create task
-//app.post('/projetosfuturos', (req, res) => {
- //const body = req.body
-  
- //res.json(body)
-// })
+
   
   // Show task
   //app.get('/tarefasdehoje/:id', (req, res) => {

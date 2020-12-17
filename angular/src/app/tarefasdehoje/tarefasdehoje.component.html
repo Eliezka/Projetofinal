@@ -1,24 +1,15 @@
-<!--<h1>Tarefas de hoje</h1>
-<p> Tarefas para serem feitas hoje </p>
-
-<li *ngFor="let task of tasks">
-    <b>{{ task.name }}</b>
-    <ul>
-        <li> Descrição: {{ task.descricao }}</li>
-        <li> Prazo: {{ task.prazo }}</li>
-    </ul>
-</li>
--->
-
-
-<h2>Tarefas de hoje</h2>
+<h1>Tarefas de hoje</h1>
 <div>
+  <span>  
+  </span>
+
+  <span></span>
   <div>
     <p>A seguir, as tarefas para fazer hoje: {{ data }}</p>
     <ul>
 
       <li *ngFor="let task of tasks.resultados">
-        <b>{{ task.name }}</b>
+        <b>{{ task.name }}<input type="checkbox" ></b>
 
         <ul>
           <li>Descrição: {{ task.descricao }} </li>
